@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMoonLoader", "OpenMoonLoader.csproj", "{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Debug|x64.Build.0 = Debug|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Release|x64.ActiveCfg = Release|Any CPU
+		{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB9709CF-6C3C-4EFC-B537-AB3232681AB8}
+	EndGlobalSection
+EndGlobal

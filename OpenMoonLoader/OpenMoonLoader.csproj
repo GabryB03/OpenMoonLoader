@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51AC9AFE-6BCF-4CE7-92F5-E8A7ABC3178D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OpenMoonLoader</RootNamespace>
+    <AssemblyName>OpenMoonLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Els.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\ELZLOADER-old\zzz\bin\Release\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\ELZLOADER-new\zzz\bin\Release\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSuite 2.0">
+      <HintPath>..\ELZLOADER-new\zzz\bin\Release\MetroSuite 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Siticone.UI">
+      <HintPath>..\ELZLOADER-new\zzz\bin\Release\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp">
+      <HintPath>..\websocket-sharp-master\websocket-sharp\bin\Debug\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FormCheatLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheatLoader.Designer.cs">
+      <DependentUpon>FormCheatLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLuaInjector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLuaInjector.Designer.cs">
+      <DependentUpon>FormLuaInjector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keyboard\Input.cs" />
+    <Compile Include="Keyboard\InterceptionDriver.cs" />
+    <Compile Include="Keyboard\KeyPressedEventArgs.cs" />
+    <Compile Include="Keyboard\Keys.cs" />
+    <Compile Include="Keyboard\MousePressedEventArgs.cs" />
+    <Compile Include="Keyboard\ScrollDirection.cs" />
+    <Compile Include="Main\Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Container\ScriptAutoKill.cs" />
+    <Compile Include="Scripts\Container\ScriptChangeLanguage.cs" />
+    <Compile Include="Scripts\Container\ScriptDeepFunctionCallsInspector.cs" />
+    <Compile Include="Scripts\Container\ScriptDisableAutoKill.cs" />
+    <Compile Include="Scripts\Container\ScriptDisableMonsterVAC.cs" />
+    <Compile Include="Scripts\Container\ScriptDisableSolaceBot.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpAITables.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpArguments.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpBuffEffects.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpBuffFactors.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpCalls.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpDungeonIDs.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpFunction.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpFunctions.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpGame.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpLoadedFunctions.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpLoadedTables.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpLoadedUserdatas.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpMonsterNUIs.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpMultiFunctions.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpRidingPets.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpPets.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpSkillProperties.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpSkills.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpSkillsBuffsEffects.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpTitles.cs" />
+    <Compile Include="Scripts\Container\ScriptDumpTitlesSockets.cs" />
+    <Compile Include="Scripts\Container\ScriptEditSkillsBuffsEffects.cs" />
+    <Compile Include="Scripts\Container\ScriptFOVModification.cs" />
+    <Compile Include="Scripts\Container\ScriptFreecamera.cs" />
+    <Compile Include="Scripts\Container\ScriptMapModification.cs" />
+    <Compile Include="Scripts\Container\ScriptMonsterVAC.cs" />
+    <Compile Include="Scripts\Container\ScriptMountModification.cs" />
+    <Compile Include="Scripts\Container\ScriptSafeAutoKill.cs" />
+    <Compile Include="Scripts\Container\ScriptSkillMod.cs" />
+    <Compile Include="Scripts\Container\ScriptSolaceBot.cs" />
+    <Compile Include="Scripts\Container\ScriptSpawnInTraining.cs" />
+    <Compile Include="Scripts\Container\ScriptTeleportInField.cs" />
+    <Compile Include="Scripts\Container\ScriptTeleportInVillage.cs" />
+    <Compile Include="Scripts\Container\ScriptTitleMod.cs" />
+    <Compile Include="Scripts\Container\ScriptUniversalFunctionDumper.cs" />
+    <Compile Include="Scripts\LuaScript.cs" />
+    <Compile Include="Utils\ProtoRandom.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <EmbeddedResource Include="Forms\FormCheatLoader.resx">
+      <DependentUpon>FormCheatLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLuaInjector.resx">
+      <DependentUpon>FormLuaInjector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\AllGameDumper.lua" />
+    <None Include="Resources\AutoKill.lua" />
+    <None Include="Resources\DeepFunctionCallInspector.lua" />
+    <None Include="Resources\DisableAutoKill.lua" />
+    <None Include="Resources\DisableSolaceBot.lua" />
+    <None Include="Resources\DumpAITables.lua" />
+    <None Include="Resources\DumpArguments.lua" />
+    <None Include="Resources\DumpBuffEffects.lua" />
+    <None Include="Resources\DumpBuffFactors.lua" />
+    <None Include="Resources\DumpCalls.lua" />
+    <None Include="Resources\DumpDungeonIDs.lua" />
+    <None Include="Resources\DumpFunction.lua" />
+    <None Include="Resources\DumpFunctions.lua" />
+    <None Include="Resources\DumpLoadedFunctions.lua" />
+    <None Include="Resources\DumpLoadedTables.lua" />
+    <None Include="Resources\DumpLoadedUserdatas.lua" />
+    <None Include="Resources\DumpMultiFunctions.lua" />
+    <None Include="Resources\DumpNUIs.lua" />
+    <None Include="Resources\DumpPets.lua" />
+    <None Include="Resources\DumpRidingPets.lua" />
+    <None Include="Resources\DumpSkills.lua" />
+    <None Include="Resources\DumpSkillsBuffsAndEffect.lua" />
+    <None Include="Resources\DumpTitles.lua" />
+    <None Include="Resources\DumpTitlesSockets.lua" />
+    <None Include="Resources\DumpUniversal.lua" />
+    <None Include="Resources\EditSkillsBuffsAndEffects.lua" />
+    <None Include="Resources\InitialScript.lua" />
+    <None Include="Resources\MapModification.lua" />
+    <None Include="Resources\MonsterVAC.lua" />
+    <None Include="Resources\MountModification.lua" />
+    <None Include="Resources\SafeAutoKill.lua" />
+    <None Include="Resources\SkillMod.lua" />
+    <None Include="Resources\SkillPropertiesDumper.lua" />
+    <None Include="Resources\SolaceBot.lua" />
+    <None Include="Resources\SpawnInTraining.lua" />
+    <None Include="Resources\TitleMod.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Els.ico" />
+    <None Include="Resources\ElsDll.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
